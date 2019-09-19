@@ -12,7 +12,6 @@
     "latex-workshop.latex.clean.enabled": true,
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
-        "*.bbl",
         "*.blg",
         "*.idx",
         "*.ind",
@@ -29,7 +28,10 @@
         "*.ist",
         "*.fls",
         "*.log",
-        "*.bbl",
+        // "*.bbl",
+        "*.nav",
+        "*.snm",
+        "*.vrb",
         "*.bcf",
         "*.run.xml",
         "*.fdb_latexmk",
@@ -38,31 +40,41 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk",
-            "tools": [
-                "latexmk"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "tools": [
-                "pdflatex",
-                "biber",
-                "pdflatex",
-                "pdflatex"
-            ]
-        },
-        {
-            "name": "lualatex -> biber -> lualatex*2",
+            "name": "lualatex -> biber -> lualatex",
             "tools": [
                 "lualatex",
                 "biber",
-                "lualatex",
                 "lualatex"
             ]
         }
+        // {
+        //     "name": "latexmk",
+        //     "tools": [
+        //         "latexmk"
+        //     ]
+        // },
+        // {
+        //     "name": "pdflatex",
+        //     "tools": [
+        //         "pdflatex",
+        //         "biber",
+        //         "pdflatex",
+        //         "pdflatex"
+        //     ]
+        // }
     ],
     "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
         {
             "name": "latexmk",
             "command": "latexmk",
@@ -86,17 +98,6 @@
             ]
         },
         {
-            "name": "lualatex",
-            "command": "lualatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-pdf",
-                "%DOC%"
-            ]
-        },
-        {
             "name": "biber",
             "command": "biber",
             "args": [
@@ -111,5 +112,6 @@
             ]
         }
     ],
-    "latex-workshop.latex.autoClean.run": "onBuilt"
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.recipe.default": "first"
 }

@@ -20,11 +20,11 @@
 \usepackage{tikz}
 \usetikzlibrary{
     arrows,
-    shapes
-    % positioning,
-    % shadows,
-    % trees,
-    % calc
+    shapes,
+    positioning,
+    shadows,
+    trees,
+    calc
 }
 
 % Define TikZ elements and styles
@@ -47,7 +47,6 @@ style=alphabetic,
 citestyle=authoryear,
 natbib
 ]{biblatex}
-\addbibresource{literature.bib}
 
 % Configure section slides insertion
 \AtBeginSection[]{
@@ -61,50 +60,13 @@ natbib
   \end{frame}
 }
 
+%%% BIBLIOGRAPHY FILE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{L1.bib}
 
-\title[New data sources]{
-    New data source for social sciences \\
-    \small{Websites, Web APIs, databases, non-tabular data, textual
-           and natural language data}
-}
-\author{Szymon Talaga, Mikołaj Biesaga} % Your name
-\institute[ISS UW]{
-    The Robert Zajonc Institute for Social Studies \\ University of Warsaw \\
-    \medskip
-    \textit{stalaga@uw.edu.pl} \\
-    \textit{m.biesaga@uw.edu.pl}
-}
-\date{\today} % Date, can be changed to a custom date
+%%% LANGUAGE DEFINITIONS FOR CODE SNIPPETS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{langdefs/json.tex}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-
-
-%%% SLIDES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{\titlepage}
-
-\section{Introduction}
-
-\begin{frame}{About us}
-\begin{itemize}
-    \item Mikołaj Biesaga
-    \item Szymon Talaga
-    \item Office hours
-    \item Communication
-    \item
-\end{itemize}
-\end{frame}
-
-%%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Literature}
-\nocite{*}
-\AtNextBibliography{\footnotesize}
-\printbibliography
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\input{slides.tex}
 \end{document}
