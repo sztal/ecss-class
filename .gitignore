@@ -111,3 +111,7 @@ ENV/
 
 # VSCode
 **/.vscode
+
+# Pics
+*.png
+*.jpg
