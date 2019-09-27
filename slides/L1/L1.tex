@@ -13,7 +13,7 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{makecell}
 \usepackage{hyperref}
-\usepackage{listings}
+\usepackage{listings, lstautogobble}
 \usepackage{caption}
 \captionsetup{font=scriptsize}
 % TikZ configuration
@@ -26,6 +26,8 @@
     trees,
     calc
 }
+% Define shape of items
+\setbeamertemplate{itemize items}[square]
 
 % Define TikZ elements and styles
 \tikzstyle{block} = [rectangle, draw, fill=blue!20,
