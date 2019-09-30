@@ -108,3 +108,10 @@ ENV/
 
 # VIM
 **/*.swp
+
+# VSCode
+**/.vscode
+
+# Pics
+*.png
+*.jpg
