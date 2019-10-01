@@ -53,7 +53,7 @@
         \onslide<+>
             \begin{figure}
                 \centering
-                \includegraphics[scale = .175]{png/copy_paste.jpg}
+                \includegraphics[scale = .175]{png/copy_paste.png}
                 \caption{from \href{https://xgohorse.com}{https://xgohorse.com}}
             \end{figure}
     \end{overprint}
@@ -111,10 +111,12 @@
 
 \begin{frame}
     \frametitle{Traditional Research Methods}
-        \only<1>{
-            Tutaj będzie schemat tradycyjnych badań psychologicznych
+        \only<0>{
+            \begin{figure}
+                \includegraphics[scale = .5]{png/traditional.jpg}
+            \end{figure}
         }
-        \only<2>{
+        \only<+>{
             \begin{itemize}
                 \item surveys
                 \item observational studies
@@ -124,7 +126,7 @@
                 \item interviews
                 \item meta-analysis
             \end{itemize}}
-        \only<3>{
+        \only<+>{
             \resizebox{\textwidth}{!}{
                 \begin{tabular}{l | c | c | c | c | c | c }
                 Id & Sex & Age & Condition & Variable A & Variable B & Variable C\\
@@ -160,14 +162,19 @@
 \begin{frame}
     \setbeamercovered{transparent}
     \frametitle{Data Sources}
-    \only<1>{
+    \only<+>{
         \begin{figure}
             \includegraphics[scale=.35]{png/data_everywhere.png}
         \end{figure}}
-    \only<2>{
+    \only<+>{
+        \begin{figure}
+            \includegraphics[scale = .5]{png/tracker.jpg}
+        \end{figure}
+    }
+    \only<+>{
         \begin{itemize}
-            \item<2> social media
-            \item<2> web pages
+            \item<3> webpages
+            \item<3> social media
             \item<0> smart devices
             \item<0> digital behavioral data
             \item<0> mobile phone networks
@@ -184,8 +191,7 @@
     \frametitle{Webscraping}
     \only<+>{
         \begin{figure}
-            \includegraphics[scale = .15]{png/webscraping.jpg}
-            \caption{from \href{https://www.edureka.co/}{https://www.edureka.co/}}
+            \includegraphics[scale = .5]{png/webscraping.jpg}
         \end{figure}
     }
     \only<+>{
@@ -206,7 +212,9 @@
 \begin{frame}
     \frametitle{Application Programming Interface}
     \only<+>{
-        Tutaj będzie schemat tego co to jest API
+        \begin{figure}
+            \includegraphics[scale = .4]{png/api.jpg}
+        \end{figure}
     }
     \only<+>{
         \begin{figure}
@@ -225,10 +233,12 @@
 
 \begin{frame}
     \frametitle{Structured and Unstructured data}
-    \only<1>{
-        Tu wstawić obrazek z uporządkowaną szafką i z drugiej strony z bałaganem
+    \only<+>{
+        \begin{figure}
+            \includegraphics[scale = .4]{png/structured.jpg}
+        \end{figure}
     }
-    \only<2>{\begin{columns}[t]
+    \only<+>{\begin{columns}[t]
         \begin{column}{.5\textwidth}
             Structured Data:
             \begin{itemize}
@@ -247,7 +257,30 @@
                 \item extremely hard to manage and analysis
             \end{itemize}
         \end{column}
-    \end{columns}}
+        \end{columns}
+    }
+    \end{frame}
+\begin{frame}
+    \frametitle{Data Formats}
+    \only<+>{
+        Alice is a 17 years old young lady. Although her main field of interest is physics (especially quantum physics and string theory), she also fancy sport. Her favorite physical activities are finishing and football.
+        Bob, on the other hand, is a naughty 15 years old boy who only loves poems.
+    }
+    \only<+>{
+        \textcolor{red}{Alice} is a \textcolor{blue}{17} years old young lady. Although her main field of interest is \underline{physics} (especially \textbf{quantum physics} and \textbf{string theory}), she also fancy \underline{sport}. Her favorite physical activities are \textbf{fishing} and \textbf{football}.
+        \textcolor{red}{Bob}, on the other hand, is a naughty \textcolor{blue}{15} years old boy who only loves \underline{literature}, especially Szymborska \textbf{poems} touches his heart.
+    }
+    \only<+>{
+        \only<3>{
+            \resizebox{\textwidth}{!}{
+                \begin{tabular}{l | c | c | c | c | c | c | c | c }
+                Name & Sex & Age & Interest A & Interest A1 & Interest A2 & Interest B & Interest B1 & Interest B2\\
+                \hline \hline
+                Alice & F & 17 & physics & quantum physics & string theory & sport & fishing & football\\
+                Bob & M & 15 & literature & poems & n/a & n/a & n/a & n/a \\
+                \end{tabular}}
+        }
+    }
 \end{frame}
 
 \begin{frame}[fragile]
@@ -259,17 +292,59 @@
             firstnumber=1,
             basicstyle=\footnotesize\ttfamily
         ]
-        { name: "Alice",
-          age: 17,
-          interests: [
-            { name: "sport",
-              tags: [
-                "physical activity",
-                "outdoor"
-            ] }
+        {
+            "name": "Alice",
+            "age": 17,
+            "interests": [
+                {
+                    "name": "physics",
+                    "disciplines": [
+                        "quantum physics",
+                        "string theory"
+                    ]
+                },
+                {
+                    "name": "sport",
+                    "disciplines": [
+                        "fishing",
+                        "football"
+                    ]
+                }
+            ]
+        }
         \end{lstlisting}
     }
     \mycode
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{JSON - JavaScript Object Notation}
+    \defverbatim[colored]\mycode{%
+        \begin{lstlisting}[
+            frame=single,
+            language=json,
+            firstnumber=1,
+            basicstyle=\footnotesize\ttfamily
+        ]
+        {
+            "name": "Bob",
+            "age": 15,
+            "interests": [
+                {
+                    "name": "sport",
+                    "disciplines": [
+                        "football"
+                    ]
+                }
+            ]
+        }
+        \end{lstlisting}
+    }
+    \mycode
+\end{frame}
+
+\begin{frame}
+    \frametitle{JSON - JavaScript Object Notation}
     \begin{definition}
         \emph{JavaScript Object Notation} is a lightweight text data format which is relatively easy to read for both human naked eye and computers. Although it derives from JavaScript it is a language-independent data format. JSON is built on two structures: a collection of key-item pairs and ordered list of values. JSON filenames use .json extension.
     \end{definition}
@@ -285,8 +360,8 @@
             firstnumber=1,
             basicstyle=\footnotesize\ttfamily
         ]
-        {name:"Alice","favorite fruit":["plums","grapes"]}\n
-        {name:"Bob","favorite fruit":["watermelons"]}
+        {"name":"Alice","age":17,"interests":[{"name":"physics","fields":["quantumphysics","stringtheory"]},{"name":"sport","fields":["fishing","football"]}]}
+        {"name":"Bob","age":15,"interests":[{"name":"sport","disciplines":["football"]}]}
         \end{lstlisting}
     }
     \mycode
@@ -300,7 +375,9 @@
 \begin{frame}
     \frametitle{Natural Language Processing}
     \only<+>{
-        Tutaj będzie schemat NLP
+        \begin{figure}
+            \includegraphics[scale = .7]{png/nlp.jpg}
+        \end{figure}
     }
     \only<+>{
         \begin{definition}
@@ -319,6 +396,20 @@
     \end{itemize}
     }
 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Semantic Space}
+    \only<+>{
+        \begin{figure}
+            \includegraphics[scale = .4]{png/semantic_space-1.png}
+        \end{figure}
+    }
+    \only<+>{
+        \begin{figure}
+            \includegraphics[scale = .3]{png/semantic_clusters_words-1.png}
+        \end{figure}
+    }
 \end{frame}
 
 \section[One more things]{One more thing...}
