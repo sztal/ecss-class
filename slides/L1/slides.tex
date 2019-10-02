@@ -181,7 +181,7 @@
             \item<0> goverment data
             \item <0>...
         \end{itemize}
-        \action<2>{\alert{The fact that you can get the data does not mean you should.}}
+        \action<3>{\alert{The fact that you can get the data does not mean you should.}}
     }
 \end{frame}
 
@@ -232,22 +232,13 @@
 \subsection[Data Formats]{Data Formats}
 
 \begin{frame}
-    \frametitle{Structured and Unstructured data}
+    \frametitle{Unstructured and Structured Data}
     \only<+>{
         \begin{figure}
             \includegraphics[scale = .4]{png/structured.jpg}
         \end{figure}
     }
     \only<+>{\begin{columns}[t]
-        \begin{column}{.5\textwidth}
-            Structured Data:
-            \begin{itemize}
-                \item can be displayed in rows and columns
-                \item numbers, text, dates
-                \item requires less storage
-                \item easy to manage and analysis
-            \end{itemize}
-        \end{column}
         \begin{column}{.5\textwidth}
             Unstructured Data:
             \begin{itemize}
@@ -257,29 +248,37 @@
                 \item extremely hard to manage and analysis
             \end{itemize}
         \end{column}
+        \begin{column}{.5\textwidth}
+            Structured Data:
+            \begin{itemize}
+                \item can be displayed in rows and columns
+                \item numbers, text, dates
+                \item requires less storage
+                \item easy to manage and analysis
+            \end{itemize}
+        \end{column}
         \end{columns}
     }
     \end{frame}
 \begin{frame}
     \frametitle{Data Formats}
     \only<+>{
-        Alice is a 17 years old young lady. Although her main field of interest is physics (especially quantum physics and string theory), she also fancy sport. Her favorite physical activities are finishing and football.
-        Bob, on the other hand, is a naughty 15 years old boy who only loves poems.
+        Alice is a 17 years old young lady. Although her main field of interest is physics (especially quantum physics and string theory), she also fancies sport. Her favorite physical activities are fishing and football.
+        Bob, on the other hand, is a naughty 15 years old boy who only loves literature, especially Szymborska poems touches his heart.
     }
     \only<+>{
-        \textcolor{red}{Alice} is a \textcolor{blue}{17} years old young lady. Although her main field of interest is \underline{physics} (especially \textbf{quantum physics} and \textbf{string theory}), she also fancy \underline{sport}. Her favorite physical activities are \textbf{fishing} and \textbf{football}.
+        \textcolor{red}{Alice} is a \textcolor{blue}{17} years old young lady. Although her main field of interest is \underline{physics} (especially \textbf{quantum physics} and \textbf{string theory}), she also fancies \underline{sport}. Her favorite physical activities are \textbf{fishing} and \textbf{football}.
         \textcolor{red}{Bob}, on the other hand, is a naughty \textcolor{blue}{15} years old boy who only loves \underline{literature}, especially Szymborska \textbf{poems} touches his heart.
     }
     \only<+>{
-        \only<3>{
-            \resizebox{\textwidth}{!}{
-                \begin{tabular}{l | c | c | c | c | c | c | c | c }
-                Name & Sex & Age & Interest A & Interest A1 & Interest A2 & Interest B & Interest B1 & Interest B2\\
-                \hline \hline
-                Alice & F & 17 & physics & quantum physics & string theory & sport & fishing & football\\
-                Bob & M & 15 & literature & poems & n/a & n/a & n/a & n/a \\
-                \end{tabular}}
-        }
+        \resizebox{\textwidth}{!}{
+            \begin{tabular}{l | c | c | c | c | c | c | c | c }
+            Name & Sex & Age & Interest A & Interest A1 & Interest A2 & Interest B & Interest B1 & Interest B2\\
+            \hline \hline
+            Alice & F & 17 & physics & quantum physics & string theory & sport & fishing & football\\
+            Bob & M & 15 & literature & poems & n/a & n/a & n/a & n/a \\
+            \end{tabular}}
+
     }
 \end{frame}
 
@@ -412,7 +411,6 @@
     }
 \end{frame}
 
-\section[One more things]{One more thing...}
 %%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
     \frametitle{Literature to read}
@@ -420,8 +418,3 @@
     \AtNextBibliography{\footnotesize}
     \printbibliography
 \end{frame}
-
-
-\note{
-    https://www.theguardian.com/us-news/2015/dec/11/senator-ted-cruz-president-campaign-facebook-user-data
-}
