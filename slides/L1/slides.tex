@@ -282,64 +282,46 @@
     }
 \end{frame}
 
-\begin{frame}[fragile]
-    \frametitle{JSON - JavaScript Object Notation}
-    \defverbatim[colored]\mycode{%
-        \begin{lstlisting}[
-            frame=single,
-            language=json,
-            firstnumber=1,
-            basicstyle=\footnotesize\ttfamily
-        ]
+\begin{frame}[fragile]{JSON - JavaScript Object Notation}
+\begin{minted}[fontsize=\footnotesize]{js}
+{
+    "name": "Alice",
+    "age": 17,
+    "interests": [
         {
-            "name": "Alice",
-            "age": 17,
-            "interests": [
-                {
-                    "name": "physics",
-                    "disciplines": [
-                        "quantum physics",
-                        "string theory"
-                    ]
-                },
-                {
-                    "name": "sport",
-                    "disciplines": [
-                        "fishing",
-                        "football"
-                    ]
-                }
+            "name": "physics",
+            "disciplines": [
+                "quantum physics",
+                "string theory"
+            ]
+        },
+        {
+            "name": "sport",
+            "disciplines": [
+                "fishing",
+                "football"
             ]
         }
-        \end{lstlisting}
-    }
-    \mycode
+    ]
+}
+\end{minted}
 \end{frame}
 
-\begin{frame}[fragile]
-    \frametitle{JSON - JavaScript Object Notation}
-    \defverbatim[colored]\mycode{%
-        \begin{lstlisting}[
-            frame=single,
-            language=json,
-            firstnumber=1,
-            basicstyle=\footnotesize\ttfamily
-        ]
+\begin{frame}[fragile]{JSON - JavaScript Object Notation}
+\begin{minted}[fontsize=\footnotesize]{js}
+{
+    "name": "Bob",
+    "age": 15,
+    "interests": [
         {
-            "name": "Bob",
-            "age": 15,
-            "interests": [
-                {
-                    "name": "sport",
-                    "disciplines": [
-                        "football"
-                    ]
-                }
+            "name": "sport",
+            "disciplines": [
+                "football"
             ]
         }
-        \end{lstlisting}
-    }
-    \mycode
+    ]
+}
+\end{minted}
 \end{frame}
 
 \begin{frame}
@@ -350,23 +332,14 @@
 \end{frame}
 
 
-\begin{frame}[fragile]
-    \frametitle{JSON Lines}
-    \defverbatim[colored]\mycode{%
-        \begin{lstlisting}[
-            frame=single,
-            language=json,
-            firstnumber=1,
-            basicstyle=\footnotesize\ttfamily
-        ]
-        {"name":"Alice","age":17,"interests":[{"name":"physics","fields":["quantumphysics","stringtheory"]},{"name":"sport","fields":["fishing","football"]}]}
-        {"name":"Bob","age":15,"interests":[{"name":"sport","disciplines":["football"]}]}
-        \end{lstlisting}
-    }
-    \mycode
-    \begin{definition}
-        \emph{JSON Lines} (newline-delimited JSON) is a lightweight text data format which can be processed one record at a time. Each line consists of a JSON. JSON Lines filenames use .jl or .jsonl extensions.
-    \end{definition}
+\begin{frame}[fragile]{JSON Lines}
+\begin{minted}[fontsize=\footnotesize]{js}
+{"name":"Alice","age":17,"interests":[{"name":"physics","fields":["quantumphysics","stringtheory"]},{"name":"sport","fields":["fishing","football"]}]}
+{"name":"Bob","age":15,"interests":[{"name":"sport","disciplines":["football"]}]}
+\end{minted}
+\begin{definition}
+    \emph{JSON Lines} (newline-delimited JSON) is a lightweight text data format which can be processed one record at a time. Each line consists of a JSON. JSON Lines filenames use .jl or .jsonl extensions.
+\end{definition}
 \end{frame}
 
 \section[NLP]{Natural Language Processing}

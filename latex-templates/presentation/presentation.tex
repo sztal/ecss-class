@@ -1,5 +1,7 @@
-%!TEX program = lualatex
-\documentclass{beamer}
+%!TEX program = lualatex -shell-escape
+\documentclass[
+    hyperref={colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue}
+]{beamer}
 \mode<presentation> {
     \usetheme{Marburg}
 }
@@ -13,7 +15,7 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{makecell}
 \usepackage{hyperref}
-\usepackage{listings}
+\usepackage{minted}
 \usepackage{caption}
 \captionsetup{font=scriptsize}
 % TikZ configuration
@@ -42,7 +44,7 @@
 
 % Biber configuration
 \usepackage[
-backend=bibtex,
+backend=biber,
 style=alphabetic,
 citestyle=authoryear,
 natbib
@@ -62,9 +64,6 @@ natbib
 
 %%% BIBLIOGRAPHY FILE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addbibresource{literature.bib}
-
-%%% LANGUAGE DEFINITIONS FOR CODE SNIPPETS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{langdefs/json.tex}
 
 %%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
