@@ -7,8 +7,8 @@
 \institute[ISS UW]{
     The Robert Zajonc Institute for Social Studies \\ University of Warsaw \\
     \medskip
-    \textit{stalaga@uw.edu.pl} \\
-    \textit{m.biesaga@uw.edu.pl}
+    \href{mailto:stalaga@uw.edu.pl}{stalaga@uw.edu.pl} \\
+    \href{mailto:m.biesaga@uw.edu.pl}{m.biesaga@uw.edu.pl}
 }
 \date{2 October 2019} % Date, can be changed to a custom date
 
@@ -334,8 +334,13 @@
 
 \begin{frame}[fragile]{JSON Lines}
 \begin{minted}[fontsize=\footnotesize]{js}
-{"name":"Alice","age":17,"interests":[{"name":"physics","fields":["quantumphysics","stringtheory"]},{"name":"sport","fields":["fishing","football"]}]}
-{"name":"Bob","age":15,"interests":[{"name":"sport","disciplines":["football"]}]}
+{"name":"Alice","age":17,"interests":[
+    {"name":"physics","fields":["quantumphysics","stringtheory"]},
+    {"name":"sport","fields":["fishing","football"]}
+]}
+{"name":"Bob","age":15,"interests":[
+    {"name":"sport","disciplines":["football"]}
+]}
 \end{minted}
 \begin{definition}
     \emph{JSON Lines} (newline-delimited JSON) is a lightweight text data format which can be processed one record at a time. Each line consists of a JSON. JSON Lines filenames use .jl or .jsonl extensions.
