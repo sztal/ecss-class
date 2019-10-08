@@ -51,6 +51,38 @@
 
 \subsection[Cambridge Analytica]{Cambridge Analytica}
 
+\begin{frame}[plain,fragile]{Anatomy of the CA scandal}
+\begin{tikzpicture}[node distance=1.5cm]
+% Specification of nodes (position, etc.)
+\node (kogan)   [base] {A. Kogan\\Cambridge Psych.};
+\node (life)    [app, below of=kogan] {This is Your Digital Life \\ (FB app)};
+\node (user1)   [data, below of=life] {27k users};
+\node (user2)   [data, below of=user1] {Indirect access to 87 mln FB profiles};
+\node (sold)    [action, right of=life, xshift=1.5cm, yshift=-.5cm] {Sold to};
+\node (ca)      [base, right of=sold, xshift=.5cm] {Cambdridge\\Analytica};
+\node (other)   [app, below of=ca, yshift=-1cm] {Other data sources\\(e.g. Cruz Crew)};
+\node (pc)      [plain, right of=ca, xshift=.5cm] {$\vdots$};
+\node (p1)      [data, above of=pc] {Segment $1$};
+\node (pn)      [data, below of=pc] {Segment $n$};
+\node (micro)   [action, right of=pc, xshift=.5cm] {Microtargeting};
+\node (note)    [note, above of=sold, xshift=1cm, yshift=1cm] {Violation of FB policy;\\greyzone in terms of law};
+% Specification of paths
+\draw[->] (kogan) -- (life);
+\draw[->] (life) -- (user1);
+\draw[->] (user1) -- (user2);
+\draw[->] (kogan) -- (sold);
+\draw[->] (user2) -- (sold);
+\draw[->] (sold) -- (ca);
+\draw[->] (other) -- (ca);
+\draw[->] (ca) -- (p1);
+\draw[->] (ca) -- (pn);
+\draw[->] (p1) -- (micro);
+\draw[->] (pn) -- (micro);
+\draw[-] (sold) -- (note);
+\end{tikzpicture}
+\end{frame}
+
+
 \part[Discussion]{Discussion}
 \frame{\partpage}
 

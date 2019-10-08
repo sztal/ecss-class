@@ -22,6 +22,7 @@
 \usepackage{tikz}
 \usetikzlibrary{
     arrows,
+    arrows.meta,
     shapes,
     positioning,
     shadows,
@@ -30,16 +31,21 @@
 }
 
 % Define TikZ elements and styles
-\tikzstyle{block} = [rectangle, draw, fill=blue!20,
-    text centered, rounded corners, minimum height=2em]
-\tikzstyle{line} = [draw, -latex']
-\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-    minimum height=2em]
-\tikzset{
-    plain/.style = {
-        draw=none,
-        fill=none
-    }
+\tikzset{%
+    >={Latex[width=2mm,length=2mm]},
+    % Specifications for style of nodes:
+    plain/.style = {},
+    base/.style = {
+        plain,
+        rectangle, rounded corners, draw=black,
+        minimum width=1cm, minimum height=1cm,
+        text centered, font=\sffamily\tiny\bfseries,
+        fill=white, align=center
+    },
+    app/.style = {base, ellipse},
+    data/.style = {base, fill=gray!30},
+    action/.style = {base, circle, fill=red!30},
+    note/.style = {app, fill=yellow}
 }
 
 % Biber configuration
