@@ -1,5 +1,5 @@
 %%% TITLE AND AUTHORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[Presentation]{
+\title[Tools of the Trade]{
     Tools of the trade for a computational social scientist \\
     \small{}
 }
@@ -38,8 +38,8 @@
             \item<3,5> Click Download R for (Mac) OS X
             \item<3,5> Choose the latest stable (recommended) version and download it
             \item<3,5> Download also XQuartz
-            \item<5> Double click on R-3.6.1.pkg and follow the default installation
-            \item<5> Double click on XQuartz\_2.7.11.dmg and follow the default installation
+            \item<5> Double click on \mintinline{bash}{R-3.6.1.pkg} and follow the default installation
+            \item<5> Double click on \mintinline{bash}{XQuartz_2.7.11.dmg} and follow the default installation
         \end{enumerate}
     }
     \only<4>{
@@ -55,8 +55,8 @@
             \item<6,8> Click Download R for Windows
             \item<6,8> Choose base and download the latest version
             \item<6,8> Download also RTools (choose the recommended version)
-            \item<8> Double click on R-3.6.1-win.exe and follow the default installation
-            \item<8> Double click on Rtools35.exe and follow the default installation
+            \item<8> Double click on \mintinline{bash}{R-3.6.1-win.exe} and follow the default installation
+            \item<8> Double click on \mintinline{bash}{Rtools35.exe} and follow the default installation
         \end{enumerate}
     }
     \only<7>{
@@ -70,7 +70,7 @@
 
 \subsection[RStudio]{RStudio}
 
-\begin{frame}
+\begin{frame}[fragile]
     \only<1>{
         \centering
         \includegraphics[width = \framewidth]{png/rstudio_logo.png}
@@ -79,21 +79,24 @@
         \frametitle{What is RStudio?}
         \emph{RStudio} is an integrated development environment (IDE) for R. In other words, it is a program that allows you to write and execute R scripts in a more than convenient way.
     }
-    \only<3,5>{
+    \only<3,5,7>{
         \frametitle{How to install RStudio?}
         To install RStudio you need to \alert{have R installed} and follow these six easy steps:
         \begin{enumerate}
-            \item<3,5> Visit \textcolor{blue}{\href{https://rstudio.com/products/rstudio/download/}{www.rstudio.com}}
-            \item<3,5> Click download
-            \item<3,5> Choose RStudio Desktop (the free version)
-            \item<5> Download version appropriate for your operating system (Windows or macOS)
-            \item<5> When the file is downloaded double click on it and install RStudio in the default location
+            \item<3,5,7> Visit \textcolor{blue}{\href{https://rstudio.com/products/rstudio/download/}{www.rstudio.com}}
+            \item<3,5,7> Click download
+            \item<3,5,7> Choose RStudio Desktop (the free version)
+            \item<5,7> Download version appropriate for your operating system (Windows or macOS)
+            \item<7> When the \mintinline{bash}{RStudio-1.2.5001} is downloaded double click on it and follow the default installation
         \end{enumerate}
     }
     \only<4>{
-        \includegraphics[width = \framewidth]{png/rstudio_download}
+        \includegraphics[width = \framewidth]{png/rstudio_download.png}
     }
     \only<6>{
+        \includegraphics[width = \framewidth]{png/rstudio_download_2.png}
+    }
+    \only<8>{
         \frametitle{Voila!}
         \includegraphics[width = \framewidth]{png/rstudio.png}
     }
@@ -144,7 +147,9 @@
 \subsection[Colaboratory]{Colaboratory}
 \begin{frame}[fragile]
     \only<+>{
-        \includegraphics[width = \framewidth]{png/colab.png}
+        \begin{center}
+            \includegraphics[scale = .7]{png/colab.png}
+        \end{center}
     }
     \only<+>{
         \frametitle{What is Colaboratory?}
@@ -161,7 +166,7 @@
         If you have a google account and all of you have you just need to follow these four easy steps to open a notebook we prepared for today:
         \begin{enumerate}
             \item Visit \textcolor{blue}{\href{https://colab.research.google.com/notebooks/welcome.ipynb}{www.colab.research.google.com}}
-            \item Press \mintinline{bash}{File} and choose \mintinline{bash}{Open notebook...}
+            \item Press File and choose Open notebook\dots
             \item Choose GitHub and type \mintinline{bash}{sztal}
             \item Click on \mintinline{bash}{notebooks/jupyter/C3.ipynb}
         \end{enumerate}
@@ -192,8 +197,8 @@
         \frametitle{Before installing Anaconda on Mac}
         Unfortunately, installing Anaconda on the new macOS became a bit tricky especially if you already had Anaconda installed when you updated to macOS Catalina. Anyway, before you go any further (no matter what macOS you have) follow these three steps:
         \begin{enumerate}
-            \item<4,6> Press CMD and SPACE at the same time
-            \item<4,6> Type Terminal and press RETURN (ENTER)
+            \item<4,6> Press \mintinline{bash}{cmd} and \mintinline{bash}{space} at the same time
+            \item<4,6> Type Terminal and press \texttt{return (enter)}
             \item<6> Type \mintinline{bash}{xcode-select --install} and press RETURN (ENTER)
         \end{enumerate}
     }
@@ -210,8 +215,8 @@
             \item<8,10,12> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
             \item<8,10,12> Click download and scroll down to choose version
             \item<8,10,12> Download Python 3.7 version 64-Bit Command Line Installer
-            \item<10,12> Type \mintinline{bash}{bash ~/Downloads/Anaconda3-2019*.sh} in Terminal and press RETURN (ENTER)
-            \item<12> Type \mintinline{bash}{jupyter notebook} in Terminal and press RETURN (ENTER) to open the Jupyter Notebook App
+            \item<10,12> Type \mintinline{bash}{bash ~/Downloads/Anaconda3-2019*.sh} in Terminal and press \texttt{return (enter)}
+            \item<12> Type \mintinline{bash}{jupyter notebook} in Terminal and press \texttt{return (enter)} to open the Jupyter Notebook App
         \end{enumerate}
     }
     \only<9>{
@@ -230,8 +235,8 @@
             \item<14,16> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
             \item<14,16> Click download and scroll down to choose version
             \item<14,16> Download Python 3.7 64-Bit Graphical Installer
-            \item<14,16> Double click on Anaconda3-2019.10-Windows-x86\_64.exe and follow the default installation
-            \item<16> Type \mintinline{bash}{jupyter notebook} in Anaconda Prompt and press ENTER to open Jupyter Notebook
+            \item<14,16> Double click on \texttt{Anaconda3-2019.10-Windows-x86\_64.exe} and follow the default installation
+            \item<16> Type \mintinline{bash}{jupyter notebook} in Anaconda Prompt and press \texttt{enter} to open Jupyter Notebook
         \end{enumerate}
     }
     \only<15>{
