@@ -25,7 +25,7 @@
     \only<2>{
         \frametitle{What is R?}
         \begin{definition}
-            \emph{R} is a programming language and free software environment for statistical computing and graphics. The capabilities of R are extended through user-created packages, which allow specialised statistical techniques, graphical devices, import/export capabilities, reporting tools, etc. The core set of packages is installed in every distribution of R, and thausands more are avaliable on Comprehensive R Archive Network (CRAN), Bioconductor, GitHub, and other repositories.
+            \emph{R} is a programming language and free software environment for statistical computing and graphics. The capabilities of R are extended through user-created packages, which allow specialized statistical techniques, graphical devices, import/export capabilities, reporting tools, etc. The core set of packages is installed in every distribution of R, and thousands more are available on Comprehensive R Archive Network (CRAN), Bioconductor, GitHub, and other repositories.
         \end{definition}
     }
     \only<3,5>{
@@ -77,7 +77,7 @@
     }
     \only<2>{
         \frametitle{What is RStudio?}
-        \emph{RStudio} is an integrated development environment (IDE) for R. In other words it is a program which allows you to write and execute R scripts in more than convinient way.
+        \emph{RStudio} is an integrated development environment (IDE) for R. In other words, it is a program that allows you to write and execute R scripts in a more than convenient way.
     }
     \only<3,5>{
         \frametitle{How to install RStudio?}
@@ -109,7 +109,7 @@
     \only<+>{
         \frametitle{What is Python?}
         \begin{definition}
-            \emph{Python} is a programming language and the Python interpreter software that reads the source code and performs its instructions. There are two generations of Python: Python 2.x and Python 3.x. \alert{We will use only Python 3.x.}
+            \emph{Python} is a programming language and the Python interpreter software that reads the source code and performs its instructions. There are two generations of Python: Python 2.x and Python 3.x. \alert{We will use Python 3.x only.}
         \end{definition}
     }
     \only<+>{
@@ -124,37 +124,50 @@
         \includegraphics[width = .6\framewidth]{png/jupyter.png}
     }
     \only<+>{
-        \frametitle{What is Jupyter Notebook App?}
-        \begin{definition}
-            \emph{The Jupyter Notebook App} is an application that allows editing and running code via a web browser. The app can be run on a local desktop requiring no internet access or can be installed on a remote server and accessed through the internet.
-        \end{definition}
-    }
-    \only<+>{
         \frametitle{What is Jupyter Notebook?}
         \begin{definition}
-            \emph{Jupyter Notebooks} are documents produced by the Jupyter Notebook App which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc…). Notebook documents are both human-readable documents containing the analysis description and the results (figures, tables, etc.) as well as executable documents which can be run to perform data analysis.
+            \emph{Jupyter Notebooks} are documents produced by the Jupyter Notebook App which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc.). Notebook documents are both human-readable documents containing the analysis description and the results (figures, tables, etc.) as well as executable documents that can be run to perform data analysis.
         \end{definition}
     }
     \only<+>{
         \frametitle{Jupyter Notebook}
         \includegraphics[width = \framewidth]{png/jupyter_notebook.png}
     }
+    \only<+>{
+        \frametitle{What is Jupyter Notebook App?}
+        \begin{definition}
+            \emph{The Jupyter Notebook App} is an application that allows editing and running code via a web browser. The app can be run on a local desktop requiring no internet access or can be installed on a remote server and accessed through the internet.
+        \end{definition}
+    }
 \end{frame}
 
 \subsection[Colaboratory]{Colaboratory}
-\begin{frame}
+\begin{frame}[fragile]
     \only<+>{
         \includegraphics[width = \framewidth]{png/colab.png}
     }
     \only<+>{
         \frametitle{What is Colaboratory?}
         \begin{definition}
-            \emph{Colaboratory} is a free Jupyter Notebook environment that requires no setup and runs entirely in the cloud. In other words it is almost the same as Jupyter Notebook App but it runs in Google Cloud, so if you have a google account you have access to Colaboratory.
+            \emph{Colaboratory} is a free Jupyter Notebook environment that requires no setup and runs entirely in the cloud. In other words, it is almost the same as Jupyter Notebook App but it runs in Google Cloud, so if you have a google account you have access to Colaboratory.
         \end{definition}
     }
     \only<+>{
         \frametitle{Colaboratory}
         \includegraphics[width = \framewidth]{png/colaboratory.png}
+    }
+    \only<+>{
+        \frametitle{How to open Jupyter Notebook in Colaboratory?}
+        If you have a google account and all of you have you just need to follow these four easy steps to open a notebook we prepared for today:
+        \begin{enumerate}
+            \item Visit \textcolor{blue}{\href{https://colab.research.google.com/notebooks/welcome.ipynb}{www.colab.research.google.com}}
+            \item Press \mintinline{bash}{File} and choose \mintinline{bash}{Open notebook...}
+            \item Choose GitHub and type \mintinline{bash}{sztal}
+            \item Click on \mintinline{bash}{notebooks/jupyter/C3.ipynb}
+        \end{enumerate}
+    }
+    \only<+>{
+        \includegraphics[width = \framewidth]{png/colab_notebook.png}
     }
 \end{frame}
 
@@ -166,62 +179,62 @@
     \only<2>{
         \frametitle{What is Anaconda?}
         \begin{definition}
-            \emph{Anaconda} is a free and open-source distribution of Python and R programming langugaes for scientific mputing that aims to simplify package management and deployment. It comes with more than 1500 packages installed and conda package and virtual environment manager.
+            \emph{Anaconda} is a free and open-source distribution of Python and R programming languages for scientific computing that aims to simplify package management and deployment. It comes with more than 1500 packages installed and conda package and virtual environment manager.
         \end{definition}
     }
     \only<3>{
         \frametitle{What is Conda?}
         \begin{definition}
-            \emph{Conda} is an open-source, cross-platform, package manager and environment management system. In other words it allows to easily download new packages and to create project specific environments.
+            \emph{Conda} is an open-source, cross-platform, package manager and environment management system. In other words, it allows to easily download new packages and to create project-specific environments.
         \end{definition}
     }
-    \only<4,5,7>{
+    \only<4,6>{
         \frametitle{Before installing Anaconda on Mac}
-        Unfortunetly installing Anaconda on the new macOS became a bit tricky especially if you already had Anaconda installed when you updated to macOS Catalina. Anyway, before you go any further (no matter what macOS you have) follow these three steps:
+        Unfortunately, installing Anaconda on the new macOS became a bit tricky especially if you already had Anaconda installed when you updated to macOS Catalina. Anyway, before you go any further (no matter what macOS you have) follow these three steps:
         \begin{enumerate}
-            \item<4,5,7> Press CMD and SPACE at the same time
-            \item<4,5,7> Type Terminal and press RETURN (ENTER)
-            \item<7> Type \mintinline{bash}{xcode-select --install} and press RETURN (ENTER)
+            \item<4,6> Press CMD and SPACE at the same time
+            \item<4,6> Type Terminal and press RETURN (ENTER)
+            \item<6> Type \mintinline{bash}{xcode-select --install} and press RETURN (ENTER)
         \end{enumerate}
     }
-    \only<6>{
+    \only<5>{
         \includegraphics[width = \framewidth]{png/spotlight.png}
     }
-    \only<8>{
+    \only<7>{
         \includegraphics[width = \framewidth]{png/terminal.png}
     }
-    \only<9,11,13>{
+    \only<8,10,12>{
         \frametitle{How to install Anaconda on Mac?}
         Now, to install Anaconda just follow these five steps:
         \begin{enumerate}
-            \item<9,11,13> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
-            \item<9,11,13> Click download and scroll down to choose version
-            \item<9,11,13> Download Python 3.7 version 64-Bit Command Line Installer
-            \item<11,13> Type \mintinline{bash}{bash ~/Downloads/Anaconda3-2019*.sh} in Terminal and press RETURN (ENTER)
-            \item<13> Type \mintinline{bash}{jupyter notebook} in Terminal and press RETURN (ENTER) to open the Jupyter Notebook App
+            \item<8,10,12> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
+            \item<8,10,12> Click download and scroll down to choose version
+            \item<8,10,12> Download Python 3.7 version 64-Bit Command Line Installer
+            \item<10,12> Type \mintinline{bash}{bash ~/Downloads/Anaconda3-2019*.sh} in Terminal and press RETURN (ENTER)
+            \item<12> Type \mintinline{bash}{jupyter notebook} in Terminal and press RETURN (ENTER) to open the Jupyter Notebook App
         \end{enumerate}
     }
-    \only<10>{
+    \only<9>{
         \includegraphics[width = \framewidth]{png/anaconda_installer_mac.png}
     }
-    \only<12>{
+    \only<11>{
         \includegraphics[width = \framewidth]{png/terminal_install.png}
     }
-    \only<14>{
+    \only<13>{
         \includegraphics[width = \framewidth]{png/terminal_notebook.png}
     }
-    \only<15,17>{
+    \only<14,16>{
         \frametitle{How to install Anaconda on Windows}
         Installing Anaconda on Windows should be relatively easy:
         \begin{enumerate}
-            \item<15,17> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
-            \item<15,17> Click download and scroll down to choose version
-            \item<15,17> Download Python 3.7 64-Bit Graphical Installer
-            \item<15,17> Double click on Anaconda3-2019.10-Windows-x86\_64.exe and follow the default installation
-            \item<17> Type \mintinline{bash}{jupyter notebook} in Anaconda Prompt and press ENTER to open Jupyter Notebook
+            \item<14,16> Visit \textcolor{blue}{\href{https://www.anaconda.com}{www.anaconda.com}}
+            \item<14,16> Click download and scroll down to choose version
+            \item<14,16> Download Python 3.7 64-Bit Graphical Installer
+            \item<14,16> Double click on Anaconda3-2019.10-Windows-x86\_64.exe and follow the default installation
+            \item<16> Type \mintinline{bash}{jupyter notebook} in Anaconda Prompt and press ENTER to open Jupyter Notebook
         \end{enumerate}
     }
-    \only<16>{
+    \only<15>{
         \includegraphics[width = \framewidth]{png/anaconda_installer_win.png}
     }
 
