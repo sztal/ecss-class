@@ -25,6 +25,92 @@
             \emph{Aplication Programming Interface} is a communication protocol between a client and a server intended to simplify the building of client-side software. In other words, it is a contract between the client and the server which defines the format of possible requests and format of the response (i.e. format of the data).
         \end{definition}
     }
+\end{frame}
+
+
+\subsection{HTML}
+\begin{frame}
+    \only<+>{
+        \frametitle{Web browsing}
+        \includegraphics[width = \framewidth]{png/webpage.png}
+    }
+    \only<+>{
+        \frametitle{Web browsing}
+        \includegraphics[width = \framewidth]{png/webpage_html.png}
+    }
+    \only<+>{
+        \frametitle{Hypertext Markup Language}
+        \begin{definition}
+            \emph{Hypertext Markup Language} (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+            Web browsers receive HTML documents from a web server or local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+        \end{definition}
+    }
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{HTML example}
+    \begin{minted}[escapeinside=||,mathescape=true]{html}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Justyna Kowalczyk fandom
+        </title>
+    </head>
+    <body>
+        <p>
+            Justyna Kowalczyk |<|3
+        </p>
+    </body>
+</html>
+    \end{minted}
+\end{frame}
+
+\subsection{CSS}
+
+\begin{frame}
+        \frametitle{Cascading Style Sheets}
+        \begin{definition}
+            \emph{Cascading Style Sheets} (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+        \end{definition}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{CSS}
+    \begin{minted}[escapeinside=||,mathescape=true]{html}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Justyna Kowalczyk fandom
+        </title>
+        <style>
+            .person {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="person">
+            Justyna Kowalczyk |<|3
+        </p>
+    </body>
+</html>
+    \end{minted}
+\end{frame}
+
+\begin{frame}
+    \only<+>{
+        \frametitle{Web browsing without CSS}
+        \includegraphics[width = \framewidth]{png/webpage_nostyle.png}
+    }
+    \only<+>{
+        \frametitle{Web browsing without CSS}
+        \includegraphics[width = \framewidth]{png/webpage_css.png}
+    }
+\end{frame}
+
+\begin{frame}
     \only<+>{
         \frametitle{Types of Web APIs}
         \setbeamercovered{transparent}
@@ -40,7 +126,7 @@
     \only<1>{
         \frametitle{REST (REpresentational State Transfer)}
         \begin{definition}
-            The \emph{Representational State Transfer} (REST) is an abstraction of the architectural elements within a distributed hypermedia system. It ignores the details of component implementation and protocol syntax in order to focus on the roles of components, the constraints upon their interaction with other components, and their interpretation of significant data elements. It encompasses the fundamental constraints upon components, connectors, and data that define the basis of the Web architecture, and thus the essence of its behavior as a network-based application.
+            The \emph{Representational State Transfer} (REST) is an abstraction of the architectural elements within a distributed hypermedia system. It ignores the details of component implementation and protocol syntax to focus on the roles of components, the constraints upon their interaction with other components, and their interpretation of significant data elements. It encompasses the fundamental constraints upon components, connectors, and data that define the basis of the Web architecture, and thus the essence of its behavior as a network-based application.
         \end{definition}
     }
     \only<2,4,6,8,17,19>{
@@ -56,11 +142,11 @@
     }
     \only<3>{
         \frametitle{Clinet-Server}
-        Client and Server are \alert{independent}. They must be able to evolve separetly without any dependency on each other. In other words the application (client) should work regardless changes on the server side and the other way around.
+        Client and Server are \alert{independent}. They must be able to evolve separately without any dependency on each other. In other words, the application (client) should work regardless of changes on the server-side and the other way around.
     }
     \only<5>{
         \frametitle{Stateless}
-        Each request send by the client to the server must contain \alert{all of the information necessary to understand the request}, and cannot take advantage of any stored context on the server.
+        Each request sent by the client to the server must contain \alert{all of the information necessary to understand the request}, and cannot take advantage of any stored context on the server.
     }
     \only<7>{
         \frametitle{Cache}
@@ -68,7 +154,7 @@
     }
     \only<9,11,13,15>{
         \frametitle{Uniform Interface}
-        In order to obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints:
+        To obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints:
         \begin{enumerate}
             \item<9-> Resource-Based
             \item<11-> Manipulation of Resources Through Representations
@@ -90,15 +176,15 @@
     }
     \only<16>{
         \frametitle{Hypermedia as the Engine of Application State (HATEOAS)}
-        Clients deliver state via \alert{body contents, query-string parameters, request headers and the requested universal resource identifier} (the resource name). Services deliver state to clients via \alert{body content, response codes, and response headers}. This is technically referred-to as hypermedia (or hyperlinks within hypertext).
+        Clients deliver state via \alert{body contents, query-string parameters, request headers and the requested universal resource identifier} (the resource name). Services deliver the state to clients via \alert{body content, response codes, and response headers}. This is technically referred to as hypermedia (or hyperlinks within hypertext).
     }
     \only<18>{
         \frametitle{Layered System}
-        A client cannot ordinarily \alert{tell whether it is connected directly to the end server}, or to an intermediary along the way. Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches. Layers may also enforce security policies.
+        A client cannot ordinarily \alert{tell whether it is connected directly to the end server} or an intermediary along the way. Intermediary servers may improve system scalability by enabling load-balancing and by providing shared caches. Layers may also enforce security policies.
     }
     \only<20>{
         \frametitle{Code-On-Demand*}
-        Servers are able send \alert{executable code} to support part of application on the client side. In other words most of the time the server sends representation of the resources in the form of JSON or XML, but it can also send an executable code.
+        Servers are able to send \alert{executable code} to support part of the application on the client-side. In other words, most of the time the server sends a representation of the resources in the form of JSON or XML, but it can also send an executable code.
     }
 \end{frame}
 
@@ -107,7 +193,7 @@
     \only<+>{
         \frametitle{Hypertext Transfer Protocol}
         \begin{definition}
-            \emph{Hypertext Transfer Protocol} (HTTP) is is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.
+            \emph{Hypertext Transfer Protocol} (HTTP) is is a protocol that allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.
         \end{definition}
     }
     \only<+>{
@@ -247,39 +333,7 @@
 \begin{frame}
     \frametitle{JSON - JavaScript Object Notation}
     \begin{definition}
-        \emph{JavaScript Object Notation} is a lightweight text data format which is relatively easy to read for both human naked eye and computers. Although it derives from JavaScript it is a language-independent data format. JSON is built on two structures: a collection of key-item pairs and ordered list of values. JSON filenames use .json extension.
-    \end{definition}
-\end{frame}
-
-\subsection{XML}
-
-\begin{frame}[fragile]
-    \frametitle{XML - eXtensible Markup Language}
-    \begin{minted}{xml}
-    <?xml version="1.0" encoding="UTF-8"?>
-    <person name="Alice">
-        <age>17</age>
-        <interests category="physics">
-            quantum physics and string theory
-        </interests>
-        <interests category="sport">
-            fishing and football
-        </interests>
-    </person>
-    <person name="Bob">
-        <age>17</age>
-        <interests category="sport">
-            football
-        </interests>
-    </person>
-
-    \end{minted}
-\end{frame}
-
-\begin{frame}
-    \frametitle{XML - eXtensible Markup Language}
-    \begin{definition}
-        \emph{eXtensible Markup Language} (XML) is a self-descriptive markup language which was designed to store and transport data. Unlike in HTML the author defines both tags and document structure.
+        \emph{JavaScript Object Notation} is a lightweight text data format that is relatively easy to read for both the human naked eye and computers. Although it derives from JavaScript it is a language-independent data format. JSON is built on two structures: a collection of key-item pairs and ordered list of values. JSON filenames use .json extension.
     \end{definition}
 \end{frame}
 
