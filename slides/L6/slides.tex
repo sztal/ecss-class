@@ -20,35 +20,102 @@
 \begin{frame}{Possible forms of the project}
 \begin{enumerate}
     \item \textbf{Research project proposal.}
+    Short proposal for a research project using some of
+    the methods we discussed in the class. Details are discussed
+    in \textit{Structure of the proposal} section.
     \item \textbf{Simple research project and report.}
+    Simple data-driven project in which you gather some data from an external
+    web-based source (i.e. from an API or through webscraping), process it
+    and use it to answer a simple research question. Details are discussed in
+    \textit{Structure of the project} section.
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Structure of the proposal}
+\begin{frame}{Structure of the proposal | general information}
 \begin{itemize}
-    \item 1
+    \item \textbf{Introduction and problem statement.}
+    This section should explain what is the project about in general
+    and why the given problem matters. Significance of the problem may
+    be justified both in terms of its theoretical/scientific
+    or societal/business relevance.
+    \item \textbf{Research question.}
+    What is the specific research question you will try to answer in the
+    project. It can be either formulated as a strict hypothesis or as an
+    exploratory question (i.e. not assuming any particular effect or mechanism).
+    \item \textbf{Research methods.}
+    This section should discuss, at a general level, what data do you plan
+    to use and how will analyze it. In particular, you should clearly explain
+    why the data and methods you chose will allow you to answer your research
+    question.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Structure of the proposal | research methods}
+\begin{itemize}
+    \item \textbf{Data collection.} What is the data you are planning to use?
+    Where is it stored and how do you plan to obtain/extract it?
+    Are there any possible obstacles and if there are what can be done to
+    minimize the risk of a failure?
+    \item \textbf{Data preprocessing and storage.}
+    How will you preprocess data and in what format will store it for later
+    use? For instance, when scraping you may decide to data gathered from
+    every individual website to a JSON object and store all data in
+    \texttt{.jl} file (JSON lines).
+    \item \textbf{Analytic methods.}
+    What analytic methods will you apply to your data in order to answer
+    your question? This may include some methods that we discussed in the class
+    (i.e. sentiment analysis or some other natural language processing methods),
+    but you should also use your general statistical knowledge to decide
+    how you want to model your final data.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Structure of the project}
 \begin{itemize}
-    \item 2
+    \item The project should consist of two main items:
+    \begin{enumerate}
+        \item \textbf{Notebook} with code and description of the project.
+        More on that below.
+        \item File with the \textbf{raw data} as was extracted from
+        the external data source (e.g. API or webpage).
+    \end{enumerate}
+    \item The notebook should include short introduction describing the
+    problem and why it is significant.
+    \item The specific research question should be introduced.
+    \item Data source should be discussed. In particular in relation to
+    the research question.
+    \item Data analysis methods should be discusses, also in relation to the
+    research question.
+    \item Code and text should be mixed in the notebook in a way that
+    facilitates understanding of the adopted research methods and obtained
+    results.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Things to remember}
 \begin{itemize}
-    \item 3
+    \item Make sure you will be able to gather data legally.
+    For instance, in want to scrape some websites you should try
+    to determine whether they allow scraping. You can check this by
+    looking at so-called \texttt{robots.txt} of a website.
+    It can be found at \texttt{<url>/robots.txt}. For instance,
+    you can see Facebook configuration at \texttt{facebook.com/robots.txt}.
+    \item Be kind for your data source. If there is a platform that exposes
+    an API you should use it instead of scraping data directly from its
+    webpage.
+    \item Think about proper format for storing data. If you plan to use
+    your data to compute a statistical model in SPSS maybe JSON lines are not
+    the best and you should consider storing your data as a simple CSV file?
 \end{itemize}
 \end{frame}
 
-\section[Example]{Example of a research proposal}
+% \section[Example]{Example of a research proposal}
 
-\begin{frame}{}
-\begin{itemize}
-    \item 4
-\end{itemize}
-\end{frame}
+% \begin{frame}{}
+% \begin{itemize}
+%     \item 4
+% \end{itemize}
+% \end{frame}
 
 %%% LITERATURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{frame}[allowframebreaks]
