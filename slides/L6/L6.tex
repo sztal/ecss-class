@@ -1,0 +1,69 @@
+%!TEX program = lualatex -shell-escape
+\documentclass{beamer}
+\mode<presentation> {
+    \usetheme{Marburg}
+}
+\usepackage[english]{babel}
+\usepackage[style=english]{csquotes}
+\usepackage{fontspec}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{makecell}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{caption}
+\captionsetup{font=scriptsize}
+% TikZ configuration
+\usepackage{tikz}
+\usetikzlibrary{
+    arrows,
+    shapes,
+    positioning,
+    shadows,
+    trees,
+    calc
+}
+
+% Define TikZ elements and styles
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text centered, rounded corners, minimum height=2em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+\tikzset{
+    plain/.style = {
+        draw=none,
+        fill=none
+    }
+}
+
+% Biber configuration
+\usepackage[
+backend=biber,
+style=alphabetic,
+citestyle=authoryear,
+natbib
+]{biblatex}
+
+% Configure section slides insertion
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsection\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+%%% BIBLIOGRAPHY FILE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{literature.bib}
+
+%%% CONTENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{slides.tex}
+\end{document}
